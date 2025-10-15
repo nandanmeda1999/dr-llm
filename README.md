@@ -136,7 +136,6 @@ pip install -r requirements.txt
 <details>
 <summary><b>2️⃣ Training the Routers </b></summary>
 
-<!-- add a warning that the full code is not released yet -->
 > ⚠️ Note: Full code release is pending ⚠️
 
 Training uses **AdamW**, 25 epochs, **1×10⁻³ LR**, **bf16 precision**, and a **single A100 GPU (40GB)** — taking under 4 hours.
@@ -154,8 +153,10 @@ python train.py \
 ```
 </details>
 
+<details>
+<summary><b>3️⃣ Evaluation with lm-eval-harness</b></summary>
 
-### 3️⃣ Evaluation with lm-eval-harness
+> 🚨 Note: Full code release is pending 🚨
 
 ```bash
 lm_eval \
@@ -163,6 +164,7 @@ lm_eval \
   --tasks arc_challenge,dart,gsm8k,mmlu \
   --device cuda
 ```
+</details>
 
 
 ---
