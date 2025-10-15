@@ -3,6 +3,17 @@
 <div style="margin-top:50px; margin-left: 12%;">
   <h1 style="font-size: 30px; margin: 0;"> Dr.LLM: Dynamic Layer Routing in LLMs</h1>
 </div>
+<div align="center">
+
+🚨 **IMPORTANT NOTICE — CODE RELEASE STATUS** 🚨  
+> 🧩 The **training**, **data generation**, and **in-domain evaluation** code for **Dr.LLM** are **not yet released**.  
+> These components (MCTS supervision, router training scripts, and lm-eval integration) will be made public in an upcoming update.  
+> Please stay tuned for the full release!
+
+</div>
+
+---
+
 
 
 <div align="left" style="margin:24px 0;">
@@ -32,13 +43,25 @@
 ## 🆕 Latest Updates
 - 📢 **15 October 2025**: Paper ArXived!
 
+## 📘 Table of Contents
+- [Overview](#overview)
+- [🧪 Evaluation](#-evaluation)
+  - [In-Domain (Training & Evaluation Tasks)](#in-domain-training--evaluation-tasks)
+  - [Out-of-Domain (Generalization Benchmarks)](#out-of-domain-generalization-benchmarks)
+- [📊 Results Summary](#-results-summary)
+- [⚙️ Usage](#️-usage)
+  - [Installation](#1️⃣-installation)
+  - [Training the Routers](#2️⃣-training-the-routers)
+  - [Evaluation with lm-eval-harness](#3️⃣-evaluation-with-lm-eval-harness)
+- [🧭 Citation](#-citation)
+
 
 ## Overview
 
 <table>
 <tr>
 <td width="30%">
-<img src="image.png" width="100%">
+<img src="assets/teaser.png" width="100%">
 </td>
 <td width="70%">
 Large Language Models (LLMs) process every token through all layers of a transformer stack, causing wasted computation on simple queries and insufficient flexibility for harder ones that need deeper reasoning. Adaptive-depth methods can improve efficiency, but prior approaches rely on costly inference-time search, architectural changes, or large-scale retraining, and in practice often degrade accuracy
@@ -98,8 +121,6 @@ Compared to prior adaptive-depth methods (e.g., LayerSkip, FlexiDepth, MindSkip)
 * Requires **no finetuning or base weight modification**,
 * Outperforms SoTA methods by up to **+7.7%p accuracy**.
 
-
-
 ---
 
 ## ⚙️ Usage
@@ -116,7 +137,7 @@ pip install -r requirements.txt
 <summary><b>2️⃣ Training the Routers </b></summary>
 
 <!-- add a warning that the full code is not released yet -->
-[!⚠️ Note: Full code release is pending. Contact <a href="https://www.linkedin.com/in/ahmed-heakl/">Ahmed Heakl</a> for access. ⚠️!]
+> ⚠️ Note: Full code release is pending ⚠️
 
 Training uses **AdamW**, 25 epochs, **1×10⁻³ LR**, **bf16 precision**, and a **single A100 GPU (40GB)** — taking under 4 hours.
 
