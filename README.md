@@ -2,25 +2,23 @@
 
 # 🧩 Dr.LLM: Dynamic Layer Routing in LLMs
 
-[![arXiv](https://img.shields.io/badge/arXiv-2510.12773-b31b1b.svg)](https://arxiv.org/pdf/2510.12773)
+[![arXiv](https://img.shields.io/badge/arXiv-2510.12773-b31b1b.svg)](https://arxiv.org/pdf/2510.12773)</br>
+<a href="https://www.linkedin.com/in/ahmed-heakl/"><b>Ahmed Heakl</b></a>, <a href="https://scholar.google.com/citations?user=Jt4OYwMAAAAJ&hl=fr"><b>Martin Gubri</b></a>, <a href="https://scholar.google.com/citations?user=M59O9lkAAAAJ&hl=en"><b>Salman Khan</b></a>, <a href="https://scholar.google.com/citations?user=o0qtjzYAAAAJ&hl=en"><b>Sangdoo Yun</b></a>, <a href="https://seongjoonoh.com/"><b>Seong Joon Oh</b></a></br>
+Parameter Lab · MBZUAI · NAVER AI Lab · University of Tübingen · Tübingen AI Center
 
-**Ahmed Heakl**, **Martin Gubri**, **Salman Khan**, **Sangdoo Yun**, **Seong Joon Oh**  
-Parameter Lab · MBZUAI · NAVER AI Lab · University of Tübingen · Tübingen AI Center  
 
 ---
 
 ### 🚨 Code Release Status
-
 🧩 The **training**, **data generation**, and **in-domain evaluation** code for **Dr.LLM** are **not yet released**.  
 These components (MCTS supervision, router training scripts, and lm-eval integration) will be made public in an upcoming update.  
-
 **Stay tuned for the full release!**
 
 </div>
 
 
 ## 🆕 Latest Updates
-- 📢 **15 October 2025** — Paper ArXived!
+- 📢 **15 October 2025**: Paper ArXived!
 
 ## 📘 Table of Contents
 - [Overview](#overview)
