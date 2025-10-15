@@ -10,10 +10,7 @@
 </div>
 
 <p align="center">
-  <a href=""><img src="https://img.shields.io/badge/Project-Website-87CEEB?style=flat-square" alt="Website"></a>
-  <a href=""><img src="https://img.shields.io/badge/arXiv-Paper-brightgreen?style=flat-square" alt="arXiv"></a>
-  <a href=""><img src="https://img.shields.io/badge/🤗_Dataset-Access-green" alt="dataset"></a>
-  <a href=""><img src="https://img.shields.io/badge/HuggingFace-Model-F9D371" alt="model"></a>
+  <a href="https://arxiv.org/pdf/2510.12773"><img src="https://img.shields.io/badge/arXiv-Paper-brightgreen?style=flat-square" alt="arXiv"></a>
 </p>
 
 <p align="center">
@@ -32,7 +29,7 @@
 ---
 
 ## 🆕 Latest Updates
-- 📢 **October 2025**: Paper and inference code is released!
+- 📢 **15 October 2025**: Paper ArXived!
 
 
 ## Overview
