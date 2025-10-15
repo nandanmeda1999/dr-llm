@@ -9,10 +9,16 @@ Parameter Lab · MBZUAI · NAVER AI Lab · University of Tübingen · Tübingen 
 
 ---
 
-> 🚨 **CODE RELEASE STATUS**  
-> 🧩 The **training**, **data generation**, and **in-domain evaluation** code for **Dr.LLM** are **not yet released**.  
-> These components (MCTS supervision, router training scripts, and lm-eval integration) will be made public in an upcoming update.  
-> **Stay tuned for the full release!**
+<div align="center" style="background-color:#f6f8fa; border:1px solid #d0d7de; border-radius:8px; padding:16px">
+
+<h3>🚨 <b>CODE RELEASE STATUS</b></h3>
+
+🧩 The <b>training</b>, <b>data generation</b>, and <b>in-domain evaluation</b> code for <b>Dr.LLM</b> are <b>not yet released</b>.<br>
+These components (<b>MCTS supervision</b>, <b>router training scripts</b>, and <b>lm-eval integration</b>) will be made public in an upcoming update.<br><br>
+<b>Stay tuned for the full release!</b>
+
+</div>
+
 
 </div>
 
