@@ -1,47 +1,39 @@
-
-
-<div style="margin-top:50px; margin-left: 12%;">
-  <h1 style="font-size: 30px; margin: 0;"> Dr.LLM: Dynamic Layer Routing in LLMs</h1>
-</div>
-<div align="center">
-
-🚨 **IMPORTANT NOTICE — CODE RELEASE STATUS** 🚨  
-> 🧩 The **training**, **data generation**, and **in-domain evaluation** code for **Dr.LLM** are **not yet released**.  
-> These components (MCTS supervision, router training scripts, and lm-eval integration) will be made public in an upcoming update.  
-> Please stay tuned for the full release!
-
-</div>
-
----
-
-
-
-<div align="left" style="margin:24px 0;">
-  <img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif"
-       width="100%" height="4"/>
-</div>
-
+<h1 align="center">🧩 Dr.LLM: Dynamic Layer Routing in LLMs</h1>
 <p align="center">
-  <a href="https://arxiv.org/pdf/2510.12773"><img src="https://img.shields.io/badge/arXiv-2510.12773-b31b1b.svg" alt="arXiv"></a>
+  <img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="90%" height="4">
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/ahmed-heakl/"><b>Ahmed Heakl</b></a>, 
-  <a href="https://scholar.google.com/citations?user=Jt4OYwMAAAAJ&hl=fr"><b>Martin Gubri</b></a>, 
-  <a href="https://scholar.google.com/citations?user=M59O9lkAAAAJ&hl=en"><b>Salman Khan</b></a>, 
-  <a href="https://scholar.google.com/citations?user=o0qtjzYAAAAJ&hl=en"><b>Sangdoo Yun</b></a>,
-   <a href="https://seongjoonoh.com/"><b>Seong Joon Oh</b></a>,
+<b>Ahmed Heakl</b> · <b>Martin Gubri</b> · <b>Salman Khan</b> · <b>Sangdoo Yun</b> · <b>Seong Joon Oh</b>  
+<br>
+<b>Parameter Lab</b> · <b>MBZUAI</b> · <b>NAVER AI Lab</b> · <b>University of Tübingen</b> · <b>Tübingen AI Center</b>
 </p>
 
-
 <p align="center">
-  <b>Parameter Lab</b> · <b>MBZUAI</b> · <b>NAVER AI Lab</b> · <b>University of Tübingen</b> · <b>Tübingen AI Center</b>
+  <a href="https://arxiv.org/pdf/2510.12773">
+    <img src="https://img.shields.io/badge/arXiv-2510.12773-b31b1b.svg" alt="arXiv">
+  </a>
 </p>
 
 ---
+
+<div align="center" style="background-color:#f9f9f9; padding:10px; border-radius:5px;">
+
+### 🚨 **IMPORTANT NOTICE — CODE RELEASE STATUS**
+
+🧩 The **training**, **data generation**, and **in-domain evaluation** code for **Dr.LLM** are **not yet released**.  
+These components (**MCTS supervision**, **router training scripts**, and **lm-eval integration**) will be made public in an upcoming update.  
+**Stay tuned for the full release!**
+
+</div>
+
+
+
+
+
 
 ## 🆕 Latest Updates
-- 📢 **15 October 2025**: Paper ArXived!
+- 📢 **15 October 2025** — Paper ArXived!
 
 ## 📘 Table of Contents
 - [Overview](#overview)
