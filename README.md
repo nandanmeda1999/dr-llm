@@ -1,35 +1,22 @@
-<h1 align="center">🧩 Dr.LLM: Dynamic Layer Routing in LLMs</h1>
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="90%" height="4">
-</p>
+<div align="center">
 
-<p align="center">
-<b>Ahmed Heakl</b> · <b>Martin Gubri</b> · <b>Salman Khan</b> · <b>Sangdoo Yun</b> · <b>Seong Joon Oh</b>  
-<br>
-<b>Parameter Lab</b> · <b>MBZUAI</b> · <b>NAVER AI Lab</b> · <b>University of Tübingen</b> · <b>Tübingen AI Center</b>
-</p>
+# 🧩 Dr.LLM: Dynamic Layer Routing in LLMs
 
-<p align="center">
-  <a href="https://arxiv.org/pdf/2510.12773">
-    <img src="https://img.shields.io/badge/arXiv-2510.12773-b31b1b.svg" alt="arXiv">
-  </a>
-</p>
+[![arXiv](https://img.shields.io/badge/arXiv-2510.12773-b31b1b.svg)](https://arxiv.org/pdf/2510.12773)
+
+**Ahmed Heakl**, **Martin Gubri**, **Salman Khan**, **Sangdoo Yun**, **Seong Joon Oh**  
+Parameter Lab · MBZUAI · NAVER AI Lab · University of Tübingen · Tübingen AI Center  
 
 ---
 
-<div align="center" style="background-color:#f9f9f9; padding:10px; border-radius:5px;">
-
-### 🚨 **IMPORTANT NOTICE — CODE RELEASE STATUS**
+### 🚨 Code Release Status
 
 🧩 The **training**, **data generation**, and **in-domain evaluation** code for **Dr.LLM** are **not yet released**.  
-These components (**MCTS supervision**, **router training scripts**, and **lm-eval integration**) will be made public in an upcoming update.  
+These components (MCTS supervision, router training scripts, and lm-eval integration) will be made public in an upcoming update.  
+
 **Stay tuned for the full release!**
 
 </div>
-
-
-
-
 
 
 ## 🆕 Latest Updates
@@ -69,6 +56,15 @@ Stabilized with windowed pooling, focal loss, and bottleneck MLPs, Dr.LLM mainta
 
 > 💡 Dr.LLM equips frozen LLMs for **budget-aware**, **accuracy-driven inference** — no base weight modification required.
 
+### Routers
+<p align="center">
+  <img src="assets/routers_architecture.png" width="80%" alt="Dr.LLM Teaser">
+</p>
+
+> Our layer routing based on hidden states. Dr.LLM augments a frozen decoder-only LLM with per-layer routers that decide to skip, execute, or repeat a block once. Routers read windowed summaries of hidden states
+and are trained from MCTS-derived targets. 
+
+### Training with MCTS Supervision
 
 ## 🧪 Evaluation
 
