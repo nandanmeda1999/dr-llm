@@ -73,50 +73,21 @@ and retains accuracy-preserving or improving ones under a compute budget.
 
 ## 🧪 Evaluation
 
-We evaluate **Dr.LLM** using [`lm-eval-harness`](https://github.com/EleutherAI/lm-evaluation-harness) across both **in-domain reasoning tasks** and **out-of-domain (OOD)** benchmarks.
+We evaluate **Dr.LLM** using [`lm-eval-harness`](https://github.com/EleutherAI/lm-evaluation-harness) across **in-domain** and **out-of-domain** benchmarks.
 
 ### In-Domain (Training & Evaluation Tasks)
+Routers are trained and evaluated on **ARC-Easy/Challenge** (logic) and **DART-Math (levels 1–5)** (multi-step math reasoning), using 4K MCTS-derived execution paths.
 
-| Dataset                | Domain          | Metric   | Purpose                              |
-| ---------------------- | --------------- | -------- | ------------------------------------ |
-| **ARC-Easy/Challenge** | Logic reasoning | Accuracy | Test structured reasoning depth      |
-| **DART (levels 1–5)**  | Math reasoning  | Accuracy | Test iterative, multi-step reasoning |
-
-Dr.LLM routers are trained on 4K MCTS-derived execution paths from these datasets.
-
-
-During inference, layer routing decisions are applied *per input sequence*, adding negligible overhead and remaining KV-cache compatible.
-
----
+| Dataset | Domain | Metric |
+| -------- | ------- | ------- |
+| ARC-Easy / Challenge | Logic Reasoning | Accuracy |
+| DART (levels 1–5) | Math Reasoning | Accuracy |
 
 ### Out-of-Domain (Generalization Benchmarks)
+We test zero-shot transfer on **MMLU**, **GSM8k**, **AIME24**, **TruthfulQA**, **GPQA Diamond**, **AGIEval**, **SQuADv2**, and **PIQA**.  
+All evaluations follow default `lm-eval-harness` settings (2048 max tokens, greedy decoding).
 
-We evaluate zero-shot transfer on:
 
-> **MMLU**, **GSM8k**, **AIME24**, **TruthfulQA**, **GPQA Diamond**, **SQuADv2**, **PIQA**, and **AGIEval**.
-
-Dr.LLM achieves **only −0.85%p average accuracy drop** while maintaining efficiency across these unseen datasets — showing strong generalization.
-
----
-
-## 📊 Results Summary
-
-| Model             | Domain   | Δ Accuracy | Layers Saved |
-| ----------------- | -------- | ---------- | ------------ |
-| LLaMA-3B-Instruct | ARC+DART | **+2.7%p** | −7.4         |
-| LLaMA-8B-Instruct | ARC+DART | **+2.3%p** | −8.7         |
-| LLaMA-3B-Base     | ARC+DART | **+3.2%p** | −3.0         |
-| LLaMA-8B-Base     | ARC+DART | **+2.4%p** | −4.2         |
-| Qwen-3B-Instruct  | ARC+DART | **+2.3%p** | −3.3         |
-| Qwen-7B-Instruct  | ARC+DART | **+0.9%p** | −3.4         |
-
-> 🧠 Routers improve reasoning-heavy tasks by **up to +4.0%p accuracy** while skipping **5 layers per example** on average.
-
-Compared to prior adaptive-depth methods (e.g., LayerSkip, FlexiDepth, MindSkip), **Dr.LLM**:
-
-* Trains on only **4K MCTS paths** (vs 300K+ examples),
-* Requires **no finetuning or base weight modification**,
-* Outperforms SoTA methods by up to **+7.7%p accuracy**.
 
 ---
 
