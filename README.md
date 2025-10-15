@@ -9,7 +9,7 @@ Parameter Lab · MBZUAI · NAVER AI Lab · University of Tübingen · Tübingen 
 
 ---
 
-<div align="center" style="background-color:#f6f8fa; border:1px solid #d0d7de; border-radius:8px; padding:16px">
+<div align="center" style="border: 2px solid #FF6B6B; background-color:#fff5f5; border-radius:10px; padding:16px;">
 
 <h3>🚨 <b>CODE RELEASE STATUS</b></h3>
 
@@ -18,6 +18,7 @@ These components (<b>MCTS supervision</b>, <b>router training scripts</b>, and <
 <b>Stay tuned for the full release!</b>
 
 </div>
+
 
 
 </div>
