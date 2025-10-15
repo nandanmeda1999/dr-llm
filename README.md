@@ -65,6 +65,13 @@ Stabilized with windowed pooling, focal loss, and bottleneck MLPs, Dr.LLM mainta
 and are trained from MCTS-derived targets. 
 
 ### Training with MCTS Supervision
+<p align="center">
+  <img src="assets/training_mcts.png" width="95%" alt="Dr.LLM Teaser">
+</p>
+
+> Length-aware MCTS used to collect the supervised training dataset of per-layer routing
+configurations (skip/execute/repeat). For each input, MCTS explores modified layer paths
+and retains accuracy-preserving or improving ones under a compute budget.
 
 ## 🧪 Evaluation
 
