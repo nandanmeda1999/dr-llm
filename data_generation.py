@@ -10,11 +10,12 @@ import numpy as np
 import torch
 from transformers import (
     AutoTokenizer,
-    LlamaForCausalLM,
+    # LlamaForCausalLM,
     OlmoeForCausalLM,
     Qwen3ForCausalLM,
     Qwen2ForCausalLM
 )
+from hf_model.llama import LlamaForCausalLM
 from datasets import load_dataset
 from tqdm import tqdm
 import json
@@ -216,6 +217,7 @@ class MCTSModel:
     def generate_with_path(self, query: str, path: LayerPath, 
                           max_new_tokens: int = 10, temperature: float = 0.0) -> str:
         original_layers = self.model.model.layer_indices
+        # print("Path layers:", path.layers)
         self.model.model.layer_indices = path.layers  # Set active layers for generation
         prompt = self.prepare_prompt(query, self.tokenizer)
         inputs = self.tokenizer(prompt, return_tensors="pt").to(self.model.device)
@@ -228,6 +230,7 @@ class MCTSModel:
             temperature=None,
             top_p=None,
             min_length=input_len + 2,
+            use_cache=False,
         )
         new_tokens = outputs[0][input_len:]
         response = self.tokenizer.decode(new_tokens, skip_special_tokens=True)
@@ -310,7 +313,7 @@ def prepare_arc_data(dataset_name: str = "arc_easy", is_instruct: bool=True) -> 
     # put a seed of 42
     random.seed(42)
     if dataset_name == "arc_easy":
-        dataset = load_dataset("allenai/ai2_arc", "ARC-Easy", split="train")
+        dataset = load_dataset("allenai/ai2_arc", "ARC-Easy", split="train") # .select(range(100))
     elif dataset_name =="arc_challenge":
         dataset = load_dataset("allenai/ai2_arc", "ARC-Challenge", split="train")
     elif "dart" in dataset_name:
